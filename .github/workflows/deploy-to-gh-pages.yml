@@ -13,7 +13,7 @@ jobs:
       max-parallel: 1
       matrix:
         folder:
-          - ./
+          - ./01_Experiments/pretest-01
 
     runs-on: ubuntu-latest
     steps:
