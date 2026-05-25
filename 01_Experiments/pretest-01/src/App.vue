@@ -6,7 +6,7 @@
 
     <InstructionScreen>
       <p>
-        A new trade route is being planned between the planets Viridis and Luteus in a distant solar system.
+        A new trade route is being planned between the planets Luteus and Viridis in a distant solar system.
       </p>
 
       <img src="images/planets.png"/>
@@ -24,7 +24,7 @@
       <Screen :key="'comprehension-' + i">
         <Slide>
           <div v-if="($magpie.measurements['attempts_' + i] || 0) < 2">
-            <span style='colour:grey'>Remember that the route can only be established with the approval of the Council, meaning both members must agree.</span>
+            <span style='color:grey'>Remember that the route can only be established with the approval of the Council, meaning both members must agree.</span>
 
             <p>
               <img :src="trial.picture"/>
@@ -39,8 +39,8 @@
                 :options="['Yes, it could.','No, it could not.']"
                 @update:response="check_response($magpie.measurements['given_response_' + i], trial.correct_response, i)"/>
 
-            <p v-if="$magpie.measurements['attempts_' + i] === 1" style="colour: #B22222; font-weight: bold;">
-              That is incorrect. Please look at the rules at the top of the screen and try again.
+            <p v-if="$magpie.measurements['attempts_' + i] === 1" style="color: #B22222; font-weight: bold;">
+              That is incorrect. Please consult the rule at the top of the screen and try again.
             </p>
           </div>
 
@@ -64,13 +64,14 @@
       </Screen>
     </template>
     <InstructionScreen>
-      <p>You have passed all comprehension questions! Now we can move onto the main part of the experiment.</p>
+      <p>You have passed all comprehension questions! Now we can move on to the main part of the experiment.</p>
     </InstructionScreen>
 
     <Screen>
       <Slide>
         <p>
-          The long-awaited day of deciding the new trade route finally arrives and here’s the result:
+          The long-awaited day arrives as the Council delivers its
+          decision on the proposed new trade route:
         </p>
         <img src="images/council_yes-yes.png"/>
         <p>An inhabitant of Glaucus, the third planet in this solar system, describes the result like this:
@@ -107,6 +108,7 @@
       </Slide>
     </Screen>
 
+    <PostTestScreen/>
     <SubmitResultsScreen/>
   </Experiment>
 </template>
