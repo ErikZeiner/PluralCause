@@ -24,7 +24,7 @@
       <Screen :key="'comprehension-' + i">
         <Slide>
           <div v-if="($magpie.measurements['attempts_' + i] || 0) < 2">
-            <span style='color:grey'>Remember that the trade route can only be established with the approval of the Council, meaning both members must agree.</span>
+            <span style='color:grey'>Remember that the trade route can only be established with the approval of the Council, meaning both members must approve.</span>
 
             <p>
               <img :src="trial.picture"/>
@@ -86,7 +86,7 @@
           How likely is it that this individual would also agree with the following statement?
         </p>
         <p v-if="show_singular">
-          <b>The route can be established because the representative from {{ singular_cause }} agreed to it.</b>
+          <b>The route can be established because the representative from {{ singular_cause }} approved it.</b>
           <RatingInput
               left="Very unlikely"
               right="Very likely"
