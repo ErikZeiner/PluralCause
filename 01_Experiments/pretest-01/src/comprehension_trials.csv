@@ -1,5 +1,0 @@
-scenario;picture;correct_response
-yes-yes;images/council_yes-yes.png;Yes, it could.
-yes-no;images/council_yes-no.png;No, it could not.
-no-yes;images/council_no-yes.png;No, it could not.
-no-no;images/council_no-no.png;No, it could not.
