@@ -12,7 +12,7 @@
       <img src="images/planets.png"/>
 
       <p>
-        This route can only officially be established with approval from the <b>Interplanetary Trade Council of Planets
+        The route can only officially be established with approval from the <b>Interplanetary Trade Council of Planets
         Luteus and Viridis</b>.
         Each planet has a representative and <b>both must approve</b> the route for it to be authorised.
       </p>
@@ -24,7 +24,7 @@
       <Screen :key="'comprehension-' + i">
         <Slide>
           <div v-if="($magpie.measurements['attempts_' + i] || 0) < 2">
-            <span style='color:grey'>Remember that the route can only be established with the approval of the Council, meaning both members must agree.</span>
+            <span style='color:grey'>Remember that the trade route can only be established with the approval of the Council, meaning both members must agree.</span>
 
             <p>
               <img :src="trial.picture"/>
